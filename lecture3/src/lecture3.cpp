@@ -215,11 +215,11 @@ int main() {
 
     //</> 15
     //=====================
-    // int* p_int{new int{15}};
-    // std::cout << p_int << '\n';  // 0x55555556b2b0
-    // delete p_int;
-    // std::cout << p_int << '\n';   // 0x55555556b2b0
-    // std::cout << *p_int << '\n';  // UB
+    int* p_int{new int{15}};
+    std::cout << p_int << '\n';  // 0x55555556b2b0
+    delete p_int;
+    std::cout << p_int << '\n';   // 0x55555556b2b0
+    std::cout << *p_int << '\n';  // UB
 
     //</> 16
     //=====================
