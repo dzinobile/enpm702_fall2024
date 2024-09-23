@@ -215,11 +215,11 @@ int main() {
 
     //</> 15
     //=====================
-    int* p_int{new int{15}};
-    std::cout << p_int << '\n';  // 0x55555556b2b0
-    delete p_int;
-    std::cout << p_int << '\n';   // 0x55555556b2b0
-    std::cout << *p_int << '\n';  // UB
+    // int* p_int{new int{15}};
+    // std::cout << p_int << '\n';  // 0x55555556b2b0
+    // delete p_int;
+    // std::cout << p_int << '\n';   // 0x55555556b2b0
+    // std::cout << *p_int << '\n';  // UB
 
     //</> 16
     //=====================
@@ -264,13 +264,13 @@ int main() {
 
     //</> 22
     //=====================
-    // int *p1_int{new int{2}};
-    // int *p2_int{p1_int};
+    int *p1_int{new int{2}};
+    int *p2_int{p1_int};
 
-    // delete p1_int;
-    // p1_int = nullptr;
+    delete p1_int;
+    p1_int = nullptr;
 
-    // delete p2_int;  // UB
+    delete p2_int;  // UB
 
     //</> 23
     //=====================
