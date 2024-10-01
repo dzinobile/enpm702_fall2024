@@ -17,24 +17,40 @@
 #include <string>
 #include <vector>
 
-union MyUnion {
-    int int_value;
-    char char_value;
-};
+// union MyUnion {
+//     int int_value;
+//     char char_value;
+// };
 
-using namespace std::literals::string_literals;
+// using namespace std::literals::string_literals;
 
 int main() {
 
-    std::string quote{"Just a flesh wound!"};
-    
-    for (int i = 0; i < quote.length(); i++) {
-        std::cout << quote[i] << "\n";
-    }
+    int x{10};
+    double y{2.2};
 
-    for (const auto& c : quote) {
-        std::cout << c << "-";
-    }
+    int *p1_int{&x};
+    double *p2_int{&y};
+    int *p3_int{&x};
+
+    std::cout << "value of pointer 1 is " << p1_int << "\n";
+    std::cout << "value of pointer 2 is " << p2_int << "\n";
+    std::cout << "value of pointer 3 is " << p3_int << "\n";
+    std::cout << "value of data at pointer 1 is " << *p1_int << "\n";
+    std::cout << "value of data at pointer 2 is " << *p2_int << "\n";
+    std::cout << "value of data at pointer 3 is " << *p3_int << "\n";
+
+    
+
+    // std::string quote{"Just a flesh wound!"};
+    
+    // for (int i = 0; i < quote.length(); i++) {
+    //     std::cout << quote[i] << "\n";
+    // }
+
+    // for (const auto& c : quote) {
+    //     std::cout << c << "-";
+    // }
 
     //</> 1
     //=====================

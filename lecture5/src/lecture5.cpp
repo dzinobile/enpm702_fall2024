@@ -12,6 +12,31 @@
 #include <iostream>
 #include <typeinfo>  // needed for typeid
 #include <vector>
+#include <string>
+#include <array>
+
+
+
+int get_value(){
+    static int num{1};
+    int input_value{};
+    std::cout << "Enter value " << num << ": \n";
+    std::cin >> input_value;
+    num++;
+    return input_value;
+}
+
+
+int sum(int x1, int x2, int x3) {
+    return x1 + x2 + x3;
+}
+
+int main() {
+    int a{get_value()};
+    int b{get_value()};
+    int c{get_value()};
+    std::cout << sum(a, b, c) << "\n";
+}
 
 
 //</> 1
@@ -22,7 +47,17 @@
 //=====================
 
 // // function declaration/prototype
-// int add(int a, int b);
+// int get_var() {
+//     std::cout << "Enter int 1: \n";
+//     std::cin >> a;
+//     std::cout << "Enter int 2: \n";
+//     std::cin >> b;
+
+//     return(a, b);
+// }
+
+
+
 
 // // function definition/implementation
 // int add(int a, int b) {
@@ -30,6 +65,8 @@
 // }
 
 // int main() {
+//     int am = get_var();
+
 //     std::cout << add(1, 2) << '\n';
 // }
 
@@ -39,7 +76,7 @@
 // void print_hello();
 // void print_world();
 
-// // function definitions
+// // // function definitions
 // void print_world() {
 //     std::cout << "world\n";
 // }

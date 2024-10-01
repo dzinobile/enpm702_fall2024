@@ -9,3 +9,5 @@
  * @copyright Copyright (c) 2024
  *
  */
+void print_number(int number);
+void prompt_user();
