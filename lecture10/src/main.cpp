@@ -5,19 +5,19 @@
 
 //</>--- Function Pointers - code #1
 //====================================
-// int add(int a, int b) { return a + b; }
+int add(int a, int b) { return a + b; }
 
-// int main() {
-//     // Declaring a function pointer and assigning it to 'add'
-//     int (*ptr)(int, int) = &add;  // ptr is now a callable
+int main() {
+    // Declaring a function pointer and assigning it to 'add'
+    int (*ptr)(int, int) = &add;  // ptr is now a callable
 
-//     // Call add through ptr
-//     int result_dereference = (*ptr)(5, 10);      // Using dereference
-//     int result_direct = ptr(5, 10);  // Direct invocation
+    // Call add through ptr
+    int result_dereference = (*ptr)(5, 10);      // Using dereference
+    int result_direct = ptr(5, 10);  // Direct invocation
 
-//     std::cout << "Result: " << result_dereference << '\n';
-//     std::cout << "Result: " << result_direct << '\n';
-// }
+    std::cout << "Result: " << result_dereference << '\n';
+    std::cout << "Result: " << result_direct << '\n';
+}
 
 //</>--- Function Pointers - code #2
 // //================================================
